@@ -1,11 +1,17 @@
 Final OS - Flask Web Application
 This project is a Flask-based web application that serves as a simple timetable viewer for undergraduate and graduate students. The application connects to a PostgreSQL database to fetch and display timetable data based on the selected level.
 
-Dashboard: A landing page where users can select their academic level: Undergraduate or Graduate.
+Dashboard: 
+A landing page where users can select their academic level: Undergraduate or Graduate.
+
 Timetable Display:
+
 Undergraduate students view a timetable specific to their level.
 Graduate students view a timetable specific to their level.
-Dynamic Data Fetching: The timetable data is retrieved dynamically from a PostgreSQL database using Flask and rendered on the frontend.
+
+Dynamic Data Fetching: 
+
+The timetable data is retrieved dynamically from a PostgreSQL database using Flask and rendered on the frontend.
 
 ![image](https://github.com/user-attachments/assets/83948cb8-150a-4018-8347-7eab756d4a90)  
 
