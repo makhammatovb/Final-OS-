@@ -34,7 +34,7 @@ def timetable():
         conn = pg8000.connect(**DB_CONFIG)
         cur = conn.cursor()
         query = "SELECT * FROM Timetable WHERE level = %s;"
-        cur.execute(query, (level_label,))
+        cur.execute(query, (level,))
         rows = cur.fetchall()
         cur.close()
         conn.close()
@@ -45,7 +45,6 @@ def timetable():
             return render_template("timetable.html", level=level_label, data=[], message="No data found for this level.")
     except Exception as e:
         return render_template("timetable.html", level=None, data=[], message=f"Error: {e}")
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000)
