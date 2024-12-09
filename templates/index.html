@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Timetable</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+        label {
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 6px;
+            outline: none;
+            background: #fff;
+            color: #333;
+        }
+        button {
+            margin-top: 20px;
+            background: #ff9800;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            color: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background: #e57c00;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📅 University Timetable</h1>
+
+        <form action="/timetable" method="GET">
+            <label for="level">Select Your Level</label>
+            <select name="level" id="level">
+                <option value="1">🎓 Level 1</option>
+                <option value="2">📘 Level 2</option>
+                <option value="3">🧪 Level 3</option>
+            </select>
+            <button type="submit">View Timetable</button>
+        </form>
+
+        <div class="footer">
+            Plan your semester effortlessly! 🚀
+        </div>
+    </div>
+</body>
+</html>
