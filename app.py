@@ -19,7 +19,7 @@ def index():
 def timetable():
     level = request.args.get('level')
     if not level:
-        return render_template("timetable.html", level=None, data=[], message="No level selected.")
+        return render_template("timetable_boburs_project.html", level=None, data=[], message="No level selected.")
 
     levels_map = {
         "1": "Undergraduate",
@@ -28,7 +28,7 @@ def timetable():
 
     level_label = levels_map.get(level)
     if not level_label:
-        return render_template("timetable.html", level=None, data=[], message="Invalid level selected.")
+        return render_template("timetable_boburs_project.html", level=None, data=[], message="Invalid level selected.")
 
     try:
         conn = pg8000.connect(**DB_CONFIG)
@@ -40,11 +40,11 @@ def timetable():
         conn.close()
 
         if rows:
-            return render_template("timetable.html", level=level_label, data=rows, message="")
+            return render_template("timetable_boburs_project.html", level=level_label, data=rows, message="")
         else:
-            return render_template("timetable.html", level=level_label, data=[], message="No data found for this level.")
+            return render_template("timetable_boburs_project.html", level=level_label, data=[], message="No data found for this level.")
     except Exception as e:
-        return render_template("timetable.html", level=None, data=[], message=f"Error: {e}")
+        return render_template("timetable_boburs_project.html", level=None, data=[], message=f"Error: {e}")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000)
